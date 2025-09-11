@@ -15,24 +15,25 @@ import {
 const AboutSection = () => {
   const features = [
     {
-      icon: <Target className="h-8 w-8" />,
-      title: "Smart Waste Management",
-      description: "AI-driven solutions for efficient waste segregation, collection, and disposal systems across urban areas."
+      icon: <Recycle className="h-8 w-8" />,
+      title: "Waste Management",
+      description: "",
+      bgColor: "bg-green-100",
+      iconColor: "text-green-600"
     },
     {
-      icon: <Shield className="h-8 w-8" />,
-      title: "Enhanced Sanitization",
-      description: "Advanced monitoring and improvement of public health through better sanitation infrastructure and practices."
+      icon: <Globe className="h-8 w-8" />,
+      title: "Interactive Map", 
+      description: "",
+      bgColor: "bg-blue-100",
+      iconColor: "text-blue-600"
     },
     {
-      icon: <Zap className="h-8 w-8" />,
-      title: "Real-time Monitoring",
-      description: "Live tracking of waste management efficiency and environmental impact across different regions."
-    },
-    {
-      icon: <Users className="h-8 w-8" />,
-      title: "Community Engagement",
-      description: "Interactive platforms that educate and involve citizens in sustainable urban development practices."
+      icon: <TreePine className="h-8 w-8" />,
+      title: "Sustainability",
+      description: "",
+      bgColor: "bg-orange-100", 
+      iconColor: "text-orange-600"
     }
   ];
 
@@ -72,15 +73,24 @@ const AboutSection = () => {
       </div>
 
       {/* Features Grid */}
-      <div className="grid md:grid-cols-2 gap-8 mb-16">
+      <div className="flex justify-center items-center gap-12 mb-16 py-8">
         {features.map((feature, index) => (
-          <Card key={index} className="card-eco p-8 group">
-            <div className="text-primary mb-4 group-hover:scale-110 transition-transform duration-300">
-              {feature.icon}
+          <div key={index} className="flex flex-col items-center text-center group">
+            <div 
+              className={`w-24 h-24 ${feature.bgColor} rounded-full flex items-center justify-center mb-4 
+                         animate-bounce group-hover:animate-pulse transition-all duration-300
+                         shadow-lg hover:shadow-xl transform hover:scale-105`}
+              style={{
+                animationDelay: `${index * 0.5}s`,
+                animationDuration: '2s'
+              }}
+            >
+              <div className={feature.iconColor}>
+                {feature.icon}
+              </div>
             </div>
-            <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-            <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
-          </Card>
+            <h3 className="text-lg font-semibold text-foreground">{feature.title}</h3>
+          </div>
         ))}
       </div>
 
