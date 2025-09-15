@@ -14,7 +14,6 @@ const Navigation = ({ activeSection, setActiveSection }: NavigationProps) => {
   const navItems = [
     { id: "hero", label: "Home" },
     { id: "about", label: "About" },
-    { id: "globe", label: "Global Network" },
     { id: "map", label: "India Map" },
     { id: "game", label: "Waste Game" },
     { id: "quiz", label: "Quiz" },
