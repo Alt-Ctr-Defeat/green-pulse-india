@@ -5,6 +5,7 @@ import MapSection from "@/components/MapSection";
 import WasteGameSection from "@/components/WasteGameSection";
 import QuizSection from "@/components/QuizSection";
 import AboutSection from "@/components/AboutSection";
+import GlobeSection from "@/components/GlobeSection";
 import { Button } from "@/components/ui/button";
 import { ArrowUp } from "lucide-react";
 
@@ -25,6 +26,10 @@ const Index = () => {
 
       <section id="about" className="py-20">
         <AboutSection />
+      </section>
+
+      <section id="globe" className="py-20 bg-muted/30">
+        <GlobeSection />
       </section>
 
       <section id="map" className="py-20 bg-muted/50">
