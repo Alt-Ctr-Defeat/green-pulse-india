@@ -16,6 +16,7 @@ const Navigation = ({ activeSection, setActiveSection }: NavigationProps) => {
     { id: "about", label: "About" },
     { id: "map", label: "India Map" },
     { id: "game", label: "Waste Game" },
+    { id: "email", label: "Email-Complaint" },
     { id: "quiz", label: "Quiz" },
   ];
 
